@@ -276,6 +276,40 @@ if not st.session_state.startup_knowledge_attempted:
         st.error(f"Could not load the startup knowledge base: {exc}")
 
 
+with st.sidebar:
+    st.header("TPC CampusAI")
+
+    with st.expander("📚 Available Knowledge", expanded=True):
+        st.caption(
+            "Mga paksa at dokumentong kasalukuyang available "
+            "sa chatbot knowledge base."
+        )
+        st.markdown("**Available topics**")
+        available_topics = [
+            "📶 Free Campus Wi-Fi and SSID",
+            "🛡️ Campus Security Protocols and Gate Schedules",
+            "📅 Start of Classes and Uniform Announcements",
+            "📝 Enrollment Advisories and Requirements",
+            "🎓 Grade Slips and Enrollment Schedules",
+            "🏫 TPC Contact Information",
+        ]
+        for topic in available_topics:
+            st.markdown(f"- {topic}")
+        st.divider()
+        st.markdown("**Indexed documents and sources**")
+        indexed_names = st.session_state.get("document_names", [])
+        if indexed_names:
+            for document_name in indexed_names:
+                st.markdown(f"- `{document_name}`")
+        else:
+            st.info("Loading available documents...")
+        st.caption(
+            "Note: Ang sagot ay limitado sa impormasyon "
+            "na aktuwal na na-index. Maaaring historical na "
+            "announcement ang ilang impormasyon."
+        )
+
+
 if st.session_state.vectorstore is None:
     st.warning(
         "No indexed school documents were found. Add supported files to "
