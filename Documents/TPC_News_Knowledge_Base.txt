@@ -1,0 +1,84 @@
+TPC SCHOOL CALENDAR AND NEWS RAG — KNOWLEDGE BASE
+Institution: Talibon Polytechnic College (TPC)
+Source index: https://tpc.edu.ph/news
+Prepared: October 27, 2026
+
+PURPOSE AND SCOPE
+This document contains information transcribed from the TPC News & Announcements page and its linked announcements. It is a limited news snapshot, not a complete academic calendar or a substitute for current official instructions. Dates in older announcements are historical. Do not present past deadlines as current. If the answer is not in this document, say that the available knowledge base does not confirm it and recommend checking the official TPC website or the relevant college office.
+
+SOURCE 1 — STARLINK-POWERED FREE WI-FI NOW AVAILABLE AT TALIBON POLYTECHNIC COLLEGE!
+Announcement date: September 16, 2026
+Official URL: https://tpc.edu.ph/news/starlink-powered-free-wi-fi-now-available-at-talibon-polytechnic-college
+
+Talibon Polytechnic College announced that free Wi-Fi for students, faculty, and staff is active on campus through a partnership with the Department of Information and Communications Technology (DICT). The service is powered by Starlink.
+Hotspot locations listed in the announcement:
+- Near the Covered Court
+- College Library
+
+How to connect:
+1. Open the device settings and turn on Wi-Fi.
+2. Select the network named “DICT freewifi4all”.
+3. Accept the Terms and Conditions on the portal page to start browsing.
+
+SOURCE 2 — HEIGHTENED IMPLEMENTATION OF CAMPUS SECURITY AND SAFETY PROTOCOLS
+Announcement date: September 16, 2026
+Official URL: https://tpc.edu.ph/news/heightened-implementation-of-campus-security-and-safety-protocols
+
+The announcement cites CHED Regional Office VII Memorandum No. 248, Series of 2026, and a CHED Memorandum dated August 18, 2026. TPC announced Memorandum No. 28, Series of 2026, issued September 10, 2026. The heightened protocols took effect on September 14, 2026.
+
+Rules listed in the announcement:
+1. Controlled vehicle entry: Gate 2 and Gate 3 are open for student vehicles from 6:30 AM to 8:30 AM only, subject to inspection.
+2. Re-entry restriction: Student vehicles that exit campus may not re-enter through Gate 2 or Gate 3 without express authorization.
+3. Student pedestrian entry: Students must enter through Gate 1 (Main Gate) or Gate 3 (back of the New Building near the NSTP Office) and comply with inspection procedures.
+4. Gate 3 access hours: Gate 3 is open for student access until 7:00 PM. After 7:00 PM, students must use Gate 1 for entry and exit.
+5. Mandatory security inspection: Students, visitors, and personnel are subject to screening of bags, packages, and personal belongings.
+6. Weapons prohibition: Firearms, knives, bladed weapons, and other dangerous materials are prohibited on campus.
+7. Compliance: Everyone is expected to cooperate with security personnel. Refusal or violations may be investigated and addressed under college policy.
+
+SOURCE 3 — START OF CLASSES ANNOUNCEMENT
+Announcement date: June 19, 2026
+Official URL: https://tpc.edu.ph/news/start-of-classes-announcement
+
+The announcement stated that classes were scheduled to start on Monday, June 22, 2026. It asked freshmen to wear a white T-shirt and maong pants. The announcement image also referred to wearing the complete uniform. This is a historical announcement and does not establish the start date of a later semester.
+
+SOURCE 4 — MEDICAL REQUIREMENT WAIVED; DRUG TEST SUBMISSION STILL REQUIRED
+Announcement date: June 18, 2026
+Official URL: https://tpc.edu.ph/news/medical-requirement-waived-drug-test-submission-still-required
+
+The announcement stated that the medical requirement was temporarily waived during enrollment. However, enrolled students were still required to submit their Drug Test Result on or before July 2026 to complete enrollment compliance requirements. The July 2026 deadline is historical and has passed. Do not describe this as the current policy without a newer official source.
+
+SOURCE 5 — ENROLLMENT FOR INCOMING FIRST-YEAR STUDENTS
+Announcement date: June 9, 2026
+Official URL: https://tpc.edu.ph/news/enrollment-for-incoming-first-year-students
+
+The announcement stated that enrollment for incoming first-year students was open until June 19, 2026, and advised applicants to complete their requirements and secure their slot before the deadline. June 19, 2026 is a historical deadline and has passed. This document does not establish the current enrollment period or current requirements.
+
+SOURCE 6 — RELEASE OF GRADE SLIPS AND THE ENROLLMENT SCHEDULE
+Announcement date: June 8, 2026
+Official URL: https://tpc.edu.ph/news/release-of-grade-slips-and-the-enrollment-schedule
+
+The announcement concerned the release of grade slips and enrollment scheduling for second-year to fourth-year students for the First Semester, Academic Year 2026–2027, at the Registrar’s Office. Students were instructed to check the specific dates, course assignments, and designated windows in the official schedule image and to bring a validated ID when processing.
+
+Programs mentioned in the available project notes include BA English, BECED, BSIS, Political Science, BS Criminology, BSAIS, and BS Agriculture. The detailed date/course/window assignments shown in the image are not fully transcribed in this text. Do not invent a specific program’s time slot or date from this document; consult the official announcement image.
+
+SOURCE 7 — ENROLLMENT ADVISORY
+Announcement date: June 2, 2026
+Official URL: https://tpc.edu.ph/news/enrollment-advisory
+
+The announcement stated that enrollment and other office transactions at TPC would be temporarily suspended on June 3–4, 2026, to allow the Recognition and Commencement Exercises to take place. Regular operations and enrollment services were scheduled to resume on Friday, June 5, 2026. These dates are historical.
+
+GENERAL INSTITUTION INFORMATION FROM THE OFFICIAL TPC WEBSITE
+Institution name: Talibon Polytechnic College
+Address listed on the website: San Isidro, Talibon, Bohol
+Telephone listed on the website: (038) 411 5340
+Email displayed on the website: [email protected]
+Website: https://tpc.edu.ph/
+
+RAG RESPONSE RULES
+- Use only the information supported by this document when answering TPC-news questions.
+- When useful, cite the source title and its official URL.
+- State the date of an announcement when answering questions about deadlines, policies, or schedules.
+- Clearly warn users when a date is historical or a deadline has passed.
+- Do not assume that an old announcement remains current.
+- Do not invent calendar dates, class schedules, course-window assignments, fees, requirements, office hours, or policies.
+- If information is absent or insufficient, answer: “I can’t confirm that from the available TPC knowledge base. Please check https://tpc.edu.ph/news or contact the relevant TPC office.”
