@@ -276,116 +276,10 @@ if not st.session_state.startup_knowledge_attempted:
         st.error(f"Could not load the startup knowledge base: {exc}")
 
 
-with st.sidebar:
-    st.header("Knowledge source")
-
-    uploaded_files = st.file_uploader(
-        "Upload school documents",
-        type=["pdf", "txt", "docx"],
-        accept_multiple_files=True,
-        help="Upload official school-calendar documents when available.",
-    )
-
-    website_url = st.text_input(
-        "Or import from official TPC website",
-        placeholder="https://www.tpc.edu.ph/news",
-    )
-
-    if st.button("Build / Refresh Knowledge Base", type="primary"):
-        documents = load_local_documents()
-        names = [
-            doc.metadata["source"]
-            for doc in documents
-        ]
-
-        if website_url.strip():
-            try:
-                with st.spinner("Fetching TPC website articles..."):
-                    website_docs = fetch_tpc_news(website_url.strip())
-                documents.extend(website_docs)
-                names.extend(
-                    doc.metadata["source"]
-                    for doc in website_docs
-                )
-                st.success(
-                    f"Fetched {len(website_docs)} TPC article(s)."
-                )
-            except Exception as exc:
-                st.error(f"Website import failed: {exc}")
-                st.stop()
-
-        if uploaded_files:
-            for uploaded in uploaded_files:
-                content = extract_text(
-                    uploaded.name,
-                    uploaded.getvalue(),
-                )
-                if content.strip():
-                    documents.append(
-                        Document(
-                            page_content=content,
-                            metadata={"source": uploaded.name},
-                        )
-                    )
-                    names.append(uploaded.name)
-
-        if not documents:
-            st.error(
-                "No readable documents found. Add official files to "
-                "the Documents folder or upload PDF, TXT, or DOCX files."
-            )
-        else:
-            try:
-                with st.spinner(
-                    "Reading, chunking, embedding, and indexing documents..."
-                ):
-                    vectorstore, count = build_vectorstore(documents)
-
-                st.session_state.vectorstore = vectorstore
-                st.session_state.chunk_count = count
-                st.session_state.document_names = sorted(set(names))
-
-                st.success(
-                    f"Knowledge base ready: {count} chunks from "
-                    f"{len(set(names))} document(s)."
-                )
-            except Exception as exc:
-                st.error(f"Could not build the knowledge base: {exc}")
-
-    with st.expander("📚 Available Knowledge", expanded=True):
-        st.caption(
-            "Mga paksa at dokumentong kasalukuyang available "
-            "sa chatbot knowledge base."
-        )
-        st.markdown("**Available topics**")
-        available_topics = [
-            "📶 Free Campus Wi-Fi and SSID",
-            "🛡️ Campus Security Protocols and Gate Schedules",
-            "📅 Start of Classes and Uniform Announcements",
-            "📝 Enrollment Advisories and Requirements",
-            "🎓 Grade Slips and Enrollment Schedules",
-            "🏫 TPC Contact Information",
-        ]
-        for topic in available_topics:
-            st.markdown(f"- {topic}")
-        st.divider()
-        st.markdown("**Indexed documents and sources**")
-        indexed_names = st.session_state.get("document_names", [])
-        if indexed_names:
-            for document_name in indexed_names:
-                st.markdown(f"- `{document_name}`")
-        else:
-            st.info("Loading available documents...")
-        st.caption(
-            "Note: Ang sagot ay limitado sa impormasyon "
-            "na aktuwal na na-index. Maaaring historical na "
-            "announcement ang ilang impormasyon."
-        )
-
 if st.session_state.vectorstore is None:
     st.warning(
-        "Build the knowledge base from the sidebar to get document-grounded "
-        "answers. You can enter a question below once it is ready."
+        "No indexed school documents were found. Add supported files to "
+        "the Documents folder to enable document-grounded answers."
     )
 else:
     st.success(
@@ -400,8 +294,8 @@ if question:
 
     if st.session_state.vectorstore is None:
         st.warning(
-            "Build the knowledge base from the sidebar before asking "
-            "questions."
+            "No school documents are indexed yet. Add supported files to "
+            "the Documents folder before asking questions."
         )
     else:
         with st.chat_message("assistant"):
