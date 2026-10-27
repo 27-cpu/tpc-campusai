@@ -464,11 +464,6 @@ if st.session_state.vectorstore is None:
         "No indexed school documents were found. Add supported files to "
         "the Documents folder to enable document-grounded answers."
     )
-else:
-    st.success(
-        f"Knowledge base loaded: "
-        f"{st.session_state.chunk_count} text chunks."
-    )
 
 question = st.chat_input("Ask a question about the school calendar")
 
