@@ -24,15 +24,174 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("📅 TPC School Calendar Assistant")
-st.caption(
-    "Ask questions about school schedules using the documents "
-    "provided to this application."
+st.markdown(
+    """
+    <style>
+    .hero-card {
+        background: linear-gradient(135deg, #F2F8F3, #FFFFFF);
+        border: 1px solid #D8E6DA;
+        border-radius: 22px;
+        padding: 34px;
+        margin-bottom: 28px;
+    }
+    .hero-label, .section-label {
+        color: #26835D;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+    .hero-title {
+        color: #173D2D;
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-weight: 750;
+        line-height: 1.1;
+        margin: 8px 0 14px;
+    }
+    .hero-title span {
+        color: #26835D;
+    }
+    .hero-description, .feature-description {
+        color: #52665A;
+        line-height: 1.6;
+    }
+    .hero-description {
+        max-width: 720px;
+        font-size: 1.05rem;
+    }
+    .section-label {
+        margin: 24px 0 12px;
+    }
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+    .feature-card {
+        background: #FFFFFF;
+        border: 1px solid #DDE8DE;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 4px 14px rgba(16, 67, 46, 0.035);
+    }
+    .feature-icon {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    .feature-title {
+        color: #173D2D;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    .notice-card {
+        background: #F2F8F3;
+        border: 1px solid #D8E6DA;
+        border-radius: 12px;
+        color: #52665A;
+        line-height: 1.6;
+        padding: 16px 18px;
+        margin-bottom: 24px;
+    }
+    [data-testid="stChatMessage"] {
+        background: #FFFFFF;
+        border: 1px solid #DDE8DE;
+        border-radius: 16px;
+        padding: 16px;
+        box-shadow: 0 4px 14px rgba(16, 67, 46, 0.035);
+        margin-bottom: 12px;
+    }
+    [data-testid="stChatInput"] {
+        background: #FFFFFF;
+        border: 1px solid #D4E3D7;
+        border-radius: 16px;
+    }
+    [data-testid="stChatInput"]:focus-within {
+        border-color: #26835D;
+        box-shadow: 0 0 0 1px #26835D;
+    }
+    [data-testid="stExpander"] {
+        border-radius: 12px;
+        border-color: #D8E6DA;
+    }
+    div.stButton > button {
+        border-radius: 10px;
+        font-weight: 650;
+    }
+    [data-testid="stAlert"] {
+        border-radius: 12px;
+    }
+    @media (max-width: 900px) {
+        .feature-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .hero-card {
+            padding: 24px;
+        }
+    }
+    @media (max-width: 520px) {
+        .feature-grid {
+            grid-template-columns: 1fr;
+        }
+        .hero-card {
+            padding: 20px;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
 )
 
-st.info(
-    "Answers are based on the uploaded or provided documents. "
-    "Free-tier model availability and API quotas may limit usage."
+st.markdown(
+    """
+    <div class="hero-card">
+        <div class="hero-label">Campus Information Assistant</div>
+        <div class="hero-title">TPC Campus<span>AI</span></div>
+        <div class="hero-description">
+            Your campus information assistant. Ask questions about
+            school schedules, enrollment, announcements, and campus
+            information using the documents available to the system.
+        </div>
+    </div>
+    <div class="section-label">Explore campus information</div>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <div class="feature-title">School Calendar</div>
+            <div class="feature-description">
+                Class schedules, announcements, and important dates.
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎓</div>
+            <div class="feature-title">Enrollment</div>
+            <div class="feature-description">
+                Requirements, advisories, and enrollment procedures.
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <div class="feature-title">Campus Policies</div>
+            <div class="feature-description">
+                Campus safety, security, and school guidelines.
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📄</div>
+            <div class="feature-title">General Information</div>
+            <div class="feature-description">
+                Useful campus resources and announcements.
+            </div>
+        </div>
+    </div>
+    <div class="notice-card">
+        <strong>Note:</strong> Answers are limited to information that
+        has actually been indexed. Some information may come from
+        historical announcements. Free-tier model availability and
+        API quotas may limit usage.
+    </div>
+    """,
+    unsafe_allow_html=True,
 )
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
