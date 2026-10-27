@@ -296,13 +296,7 @@ with st.sidebar:
         for topic in available_topics:
             st.markdown(f"- {topic}")
         st.divider()
-        st.markdown("**Indexed documents and sources**")
-        indexed_names = st.session_state.get("document_names", [])
-        if indexed_names:
-            for document_name in indexed_names:
-                st.markdown(f"- `{document_name}`")
-        else:
-            st.info("Loading available documents...")
+        
         st.caption(
             "Note: Ang sagot ay limitado sa impormasyon "
             "na aktuwal na na-index. Maaaring historical na "
