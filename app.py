@@ -281,8 +281,7 @@ with st.sidebar:
 
     with st.expander("📚 Available Knowledge", expanded=True):
         st.caption(
-            "Mga paksa at dokumentong kasalukuyang available "
-            "sa chatbot knowledge base."
+            "Topics and documents currently available in the chatbot knowledge base."
         )
         st.markdown("**Available topics**")
         available_topics = [
@@ -296,11 +295,8 @@ with st.sidebar:
         for topic in available_topics:
             st.markdown(f"- {topic}")
         st.divider()
-        
         st.caption(
-            "Note: Ang sagot ay limitado sa impormasyon "
-            "na aktuwal na na-index. Maaaring historical na "
-            "announcement ang ilang impormasyon."
+            "Note: Answers are limited to information that has actually been indexed. Some information may come from historical announcements."
         )
 
 
