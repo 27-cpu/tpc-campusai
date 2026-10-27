@@ -382,23 +382,6 @@ with st.sidebar:
             "announcement ang ilang impormasyon."
         )
 
-    st.divider()
-    st.write("**Embedding model**")
-    st.code(EMBEDDING_MODEL, language=None)
-    st.write("**Vector store**")
-    st.code("FAISS", language=None)
-    st.write("**Language model**")
-    st.code(
-        os.getenv("HF_MODEL", DEFAULT_LLM_MODEL),
-        language=None,
-    )
-
-    if st.session_state.document_names:
-        st.write("**Indexed documents**")
-        for name in st.session_state.document_names:
-            st.write(f"- {name}")
-
-
 if st.session_state.vectorstore is None:
     st.warning(
         "Build the knowledge base from the sidebar to get document-grounded "
